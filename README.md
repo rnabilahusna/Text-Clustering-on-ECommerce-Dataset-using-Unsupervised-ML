@@ -52,7 +52,11 @@ Below are the silhouette scores using different distance metrics for five cluste
 
 The highest silhouette score (**0.64**) was achieved using the **cosine distance metric**, suggesting it is the most suitable for the given text data.
 
-**Figure 1.1: Visualization of Product Category Clusters (k = 5)**
+<div align="center">
+<img src="https://github.com/user-attachments/assets/777b7c6e-7038-4606-96aa-87c27309c544" alt="Figure 1 1" width="600"/>
+
+  **Figure 1.1: Visualization of Product Category Clusters (k = 5)**
+</div>
 
 The default cluster visualization (k = 5) shows scattered points with unclear boundaries, especially between Cluster 1 and Cluster 3, indicating poor clustering.
 
@@ -79,12 +83,19 @@ The following table shows the **Within-Cluster Sum of Squares (WCSS)** and **Sil
 | 9           | 1815.91  | 0.547             |
 
 ---
+<div align="center">
+<img src="https://github.com/user-attachments/assets/3744a96b-9552-4959-82a7-c84d1fe027e1" alt="Figure 1 2" width="600"/>
 
 **Figure 1.2: The Elbow Method for Product Categories**
+</div>
 
 Based on the elbow method, the rate of WCSS decrease slows noticeably after **k = 4**, indicating diminishing returns in clustering effectiveness beyond this point.
 
+<div align="center">
+<img src="https://github.com/user-attachments/assets/d540ef72-ff0a-40b2-b649-7dcc4f8c0a61" alt="Figure 1 3" width="600"/>
+
 **Figure 1.3: Number of Clusters vs Silhouette Score**
+</div>
 
 The silhouette score peaks at **k = 4**, suggesting that this configuration yields the most distinct and well-defined clusters of product categories.  
 Choosing **k = 4** provides a balance between granularity and clustering quality.
@@ -126,7 +137,11 @@ To easily understand the scatter plot below, each of the dots represents a singl
 - 2 - Electronics
 - 3 - Fashion and Apparel
 
+<div align="center">
+<img src="https://github.com/user-attachments/assets/ad9abef8-59a9-4db2-8856-83c5ddadaad1" alt="Figure 1 4" width="600"/>
+
 **Figure 1.4: Visualization of Product Category Clusters of Four Clusters**
+</div>
 
 The figure above shows the visualization of the final clusters and cluster centers, with the points grouped more tightly within clusters and clearer boundaries between clusters with minimal overlap.
 
@@ -146,21 +161,41 @@ Each linkage method will produce different results. In this project, the chosen 
 - **Complete Linkage** produces a compact dendrogram with clusters emerging at higher distances, as shown in **Figure 1.5**.
 - **Ward Linkage** produces a tidier structure because it emphasizes minimizing the variance within each cluster, as shown in **Figure 1.6**.
 
+<div align="center">
+<img src="https://github.com/user-attachments/assets/dcd6f5a3-c466-4852-8f33-6f7d72fff580" alt="Figure 1 5" width="600"/>
+
 **Figure 1.5: Dendrogram with Complete Linkage**
+</div>
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/6b2795cc-7853-48e9-8a4c-35aac2572c91" alt="Figure 1 6" width="600"/>
 
 **Figure 1.6: Dendrogram with Ward Linkage**
+</div>
 
 When comparing **Figure 1.5** with **Figure 1.6**, the dendrogram using Ward Linkage produces a more concise and interpretable visualization compared to Complete Linkage.
 
 That being said, the optimal number of clusters is yet to be determined. Thus, evaluation using the Silhouette Score is used to determine the appropriate number of clusters. **Figure 1.7** shows the silhouette scores from cluster numbers 4 to 8. The scores are also visualized using a bar plot in **Figure 1.8**.
 
+<div align="center">
+<img src="https://github.com/user-attachments/assets/3122f6d4-a365-448b-b9a5-a9d2c8ac9756" alt="Figure 1 7" width="500"/>
+
 **Figure 1.7: Silhouette Score for Hierarchical Agglomerative**
+</div>
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/32e5a44d-7859-40f1-a691-5c60fca3e7a9" alt="Figure 1 8" width="600"/>
 
 **Figure 1.8: Visualization for Silhouette Score of Hierarchical Agglomerative**
+</div>
 
 It is shown that the optimum number of clusters in Hierarchical Agglomerative is **5**, with a silhouette score of **0.49**. Thus, the optimum number of clusters is picked, and the data is applied into the Hierarchical Agglomerative model. The clusters are visualized using a scatter plot as shown in **Figure 1.9**.
 
+<div align="center">
+<img src="https://github.com/user-attachments/assets/24c8b933-f907-401b-841e-2323f425dcd3" alt="Figure 1 9" width="600"/>
+
 **Figure 1.9: Clusters in Hierarchical Agglomerative**
+</div>
 
 In conclusion, the Hierarchical Agglomerative model considers there are five clusters within the dataset. This finding is supported by the silhouette score evaluation to determine the optimal number of clusters.
 
@@ -169,7 +204,12 @@ In conclusion, the Hierarchical Agglomerative model considers there are five clu
 
 The analysis revealed that **DBSCAN** is effective in identifying clusters with irregular shapes, which is a significant advantage over other clustering algorithms such as K-Means that assume spherical cluster shapes. The parameter selection played a crucial role in the performance of the algorithm. An appropriate choice of ε and MinPts ensured that meaningful clusters were identified without excessive noise classification.
 
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/cbaf0b4f-7dd1-4de5-a01c-9ff09bf867b9" alt="Figure 1 10" width="600"/>
+
 ### Figure 1.10: Top 20 TF-IDF Features
+</div>
 
 The X-axis (tf-idf score) in Figure 1.10 represents the Term Frequency-Inverse Document Frequency value, which indicates the importance of a word in a document relative to a corpus.  
 The Y-axis (feature) lists the top 20 terms with the highest TF-IDF scores.
@@ -178,7 +218,12 @@ Words with higher TF-IDF scores are more unique and significant in the context o
 
 Terms such as **"set," "book," "size," "product,"** and **"black"** are also significant, suggesting frequent and unique use in the dataset. This information is useful for understanding the main themes and distinguishing terms in the dataset. For instance, in an e-commerce context, "cotton" might be prevalent in clothing product descriptions, while "book" might be important in a subset of literature-related products.
 
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/78172e27-5ed2-4d0b-a413-adbfb7974d6c" alt="Figure 1 11" width="600"/>
+
 ### Figure 1.11: 2D Visualization of Reduced Data
+</div>
 
 The scatter plot in Figure 1.11 shows the distribution of data points in a two-dimensional space. Each point represents a reduced-dimension representation of an original data point from the dataset.  
 
@@ -196,9 +241,19 @@ DBSCAN is highly sensitive to the values of **eps** and **min_samples**, making 
 - It does not make sense to set `min_samples = 1` because it would result in each point being its own cluster. It must be at least 3, and generally about twice the number of dimensions.  
 - Domain knowledge can also guide the value selection.
 
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/82d8a9f0-132e-4dd7-be4b-3090fe0f74cb" alt="Figure 1 12" width="600"/>
+
 ### Figure 1.12: DBSCAN Cluster (eps=0.5, min_samples=5)
+</div>
+
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/572d99f2-a7f0-4a0c-a48b-ae1375dda907" alt="Figure 1 13" width="600"/>
 
 ### Figure 1.13: DBSCAN Cluster (eps=best_eps, min_samples=best_min_sample)
+</div>
 
 - Figure 1.12 visualizes clusters identified by DBSCAN on reduced data, showing irregular and not well-defined clusters.
 - Figure 1.13 shows clusters after parameter tuning, resulting in more regular and meaningful groupings.
@@ -220,7 +275,12 @@ The silhouette plot visually evaluates the quality of clustering:
 - Points closer to 1 are well-clustered; points near 0 or negative may be misclassified.
 - The red dashed vertical line represents the average silhouette score.
 
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/222e8922-c40c-4ec9-a84a-0a98bf1bc10d" alt="Figure 1 14" width="600"/>
+
 ### Figure 1.14: The Silhouette Plot for Various Clusters
+</div>
 
 # 1.5 Analysis of Clusters
 
@@ -229,7 +289,12 @@ From the scatter plot below:
 - Each dot represents a single product description incorporating its review.
 - Small red crosses indicate the product categories and their labels.
 
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/293a8ffc-91de-4fb6-b2e9-c202964c8464" alt="Figure 1 15" width="600"/>
+
 ### Figure 1.15: Visualization of Product Category Clusters of Four Clusters
+</div>
 
 Using the best cluster results from K-Means clustering, we explored further to understand the product descriptions within each cluster. The text clustering analysis of product descriptions and reviews revealed distinct themes providing insights into product categories.  
 
@@ -243,7 +308,12 @@ Each cluster serves as a **categorical snapshot** of key aspects and features di
 - Predominantly contains product descriptions and reviews related to books and literature.
 - Themes include discussions around authors, life experiences, storytelling, and new releases.
 
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/07849da6-63ac-4a21-9c58-efd838609a4f" alt="Figure 1 16" width="600"/>
+
 ### Figure 1.16: WordCloud for Cluster 0 - Books and Literature
+</div>
 
 ---
 
@@ -255,7 +325,12 @@ Each cluster serves as a **categorical snapshot** of key aspects and features di
 - Descriptions of household items focusing on materials like stainless steel and product sets.
 - Highlights practical aspects such as size, color, and ease of use.
 
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/2f481bd9-859a-4c82-b25b-06cd14108274" alt="Figure 1 17" width="600"/>
+
 ### Figure 1.17: WordCloud for Cluster 1 - Housewares
+</div>
 
 ---
 
@@ -267,7 +342,12 @@ Each cluster serves as a **categorical snapshot** of key aspects and features di
 - Centered around electronic devices and accessories.
 - Focuses on connectivity, audio equipment, and technical specifications.
 
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/9e92ecd0-0ddd-4454-bbdf-b5a05439d0e4" alt="Figure 1 18" width="600"/>
+
 ### Figure 1.18: WordCloud for Cluster 2 - Electronics
+</div>
 
 ---
 
@@ -279,7 +359,11 @@ Each cluster serves as a **categorical snapshot** of key aspects and features di
 - Captures fashion and apparel product descriptions.
 - Emphasizes materials (like cotton), target demographics, and fit.
 
+<div align="center">
+<img src="https://github.com/user-attachments/assets/4a6d4922-4d14-4cd2-bb81-87a3ea199737" alt="Figure 1 19" width="600"/>
+
 ### Figure 1.19: WordCloud for Cluster 3 - Fashion and Apparel
+</div>
 
 The analysis of product descriptions and reviews using **K-Means clustering** with **TF-IDF vectorization** effectively categorized text data into meaningful clusters.  
 Each cluster reveals specific themes related to different product categories, providing valuable insights into product features and customer focus.
